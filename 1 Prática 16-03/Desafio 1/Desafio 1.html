@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora De Soma</title>
+    <script src="Desafio 1.js"></script>
+    <style>
+        body{font-family: sans-serif}
+        input{padding: 10px; border-radius: 5px;}
+        button{background-color: rgb(68, 68, 109); color: white; cursor: pointer;}
+        #resultado{font-weight: bold;}
+    </style>
+</head>
+<body>
+
+    <h2>Minha Calculadora</h2>
+
+    <input type="number" id="num1" placeholder="Valor 1">
+    <span> + </span>
+    <input type="number" id="num2" placeholder="Valor 2">
+
+    <button onclick="sum()"> = </button>
+    
+    <input type="number" id="resultado" placeholder="Resultado" readonly>
+</body>
+</html>
