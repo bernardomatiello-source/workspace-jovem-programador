@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Calculadora De Soma</title>
-    <script src="Desafio 1.js"></script>
-    <style>
-        body{font-family: sans-serif}
-        input{padding: 10px; border-radius: 5px;}
-        button{background-color: rgb(68, 68, 109); color: white; cursor: pointer;}
-        #resultado{font-weight: bold;}
-    </style>
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Desafios</title>
 </head>
 <body>
-
-    <h2>Minha Calculadora</h2>
-
-    <input type="number" id="num1" placeholder="Valor 1">
-    <span> + </span>
-    <input type="number" id="num2" placeholder="Valor 2">
-
-    <button onclick="sum()"> = </button>
     
-    <input type="number" id="resultado" placeholder="Resultado" readonly>
+    <div id="conversor">
+        <input id="celsius" type="number" placeholder="Digite os Celsius">
+        <span> °C é igual a </span>
+        <input type="text" id="fahrenheit" placeholder="Fahrenheit" readonly>
+    </div>
+    <br>
+    <div id="compares">
+        <input id="valor1" type="text" placeholder="Digite o Primerio Valor">
+        <span> Comparado com </span>
+        <input id="valor2" type="text" placeholder="Digite o Segundo Valor">
+        <span> = </span>
+        <input id="result-compare" type="text" placeholder="Comparação" readonly>
+    </div>
+    <br>
+    <div id="retanguleArea">
+        <input type="number" id="height" placeholder="Digite a altura">
+        <span> e </span>
+        <input type="number" id="width" placeholder="Digite a largura">
+        <span> = </span>
+        <input type="string" id="area" placeholder="Área do Retangulo">
+    </div>
+
+    <script src="Desafio 1.js"></script>
 </body>
 </html>

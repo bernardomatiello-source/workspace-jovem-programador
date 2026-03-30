@@ -1,15 +1,57 @@
-function sum() {
-    //Pegar os campos do HTML pelo ID e alocar em uma variavel
-    const campo1 = document.getElementById("num1")
-    const campo2 = document.getElementById("num2")
-    const campoResultado = document.getElementById("resultado");
+// Conversor de Celsius para Fahrenheit
+const inputCelsius = document.getElementById("celsius")
+const inputFahrenheit = document.getElementById("fahrenheit")
 
-    //Converter as variaveis para number
-    const valor1 = Number(campo1.value)
-    const valor2 = Number(campo2.value)
+function conversor() {
+    const celsius = Number(inputCelsius.value)
 
-    //Realizar a soma e guardar na variavel
-    const soma = valor1 + valor2
+    const resultado = (celsius * 9 / 5) + 32
 
-    campoResultado.value = soma
+    inputFahrenheit.value = `${resultado} Fahrenheit`
 }
+
+inputCelsius.addEventListener('input', conversor)
+
+// Comparação de Valores
+const inputValor1 = document.getElementById("valor1")
+const inputValor2 = document.getElementById("valor2")
+const resultCompare = document.getElementById("result-compare")
+
+function compareValue() {
+    const v1 = inputValor1.value
+    const v2 = inputValor2.value
+
+    const num1 = Number(v1)
+    const num2 = Number(v2)
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        if (num1 > num2) {
+            resultCompare.value = `${num1} é maior que ${num2}`
+        } else if (num1 < num2) {
+            resultCompare.value = `${num1} é menor que ${num2}`
+        } else { 
+            resultCompare.value = `Ambos os valores são iguais`
+        }
+    } else {
+        if (v1 === v2) {
+            resultCompare.value = `Os textos são iguais`
+        } else {
+            resultCompare.value = `Os textos são diferentes`
+        }
+    }
+}
+
+inputValor1.addEventListener('input', compareValue)
+inputValor2.addEventListener('input', compareValue)
+
+// Area do Retangulo
+const alturaRetangulo = document.getElementById('height')
+const larguraRetangulo = document.getElementById('width')
+const areaRetangulo = document.getElementById('area')
+
+function calculateArea() {
+    areaRetangulo.value = `${alturaRetangulo.value * larguraRetangulo.value} unidades²`
+}
+
+larguraRetangulo.addEventListener('input', calculateArea)
+alturaRetangulo.addEventListener('input', calculateArea)
