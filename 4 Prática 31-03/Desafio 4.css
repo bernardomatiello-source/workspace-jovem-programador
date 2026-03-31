@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #e0eafc; /* Degradê suave */
+    background: linear-gradient(to right, #cfdef3, #e0eafc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #3498db;
+}
+
+#mensagemSaida {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    color: #2980b9;
+    font-weight: bold;
+    min-height: 20px;
+    border-left: 5px solid #3498db;
+}
+
+/* Classe utilitária caso queira esconder a div antes do primeiro clique */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Interativo</title>
+    <link rel="stylesheet" href="Desafio 4.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Escolha sua Bebida</h1>
+        
+        <label for="bebidaSelect">O que você deseja agora?</label>
+        <select id="bebidaSelect">
+            <option value="" disabled selected>-- Selecione --</option>
+            <option value="coffee">Café ☕</option>
+            <option value="tea">Chá 🍵</option>
+            <option value="juice">Suco 🍹</option>
+        </select>
+
+        <div id="mensagemSaida" class="hidden"></div>
+    </div>
+
+    <script src="Desafio 4.js"></script>
+</body>
+</html>
