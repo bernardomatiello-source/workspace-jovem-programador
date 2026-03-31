@@ -32,3 +32,19 @@ function calculateIMC() {
 
 pesoDaPessoa.addEventListener('input', calculateIMC)
 alturaDaPessoa.addEventListener('input', calculateIMC)
+
+// Classificação de Números
+const numberInput = document.getElementById('numberInput')
+const classification = document.getElementById('classification')
+
+function numberClassification() {
+    if(numberInput.value > 0) {
+        classification.value = "O Número é Positivo"
+    } else if(numberInput.value < 0) {
+        classification.value = "O Número é Negativo"
+    } else {
+        classification.value = "Zero"
+    }
+}
+
+numberInput.addEventListener('input', numberClassification)
