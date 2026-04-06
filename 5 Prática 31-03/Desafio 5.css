@@ -1,0 +1,107 @@
+/* 1. RESET: Remove margens padrão e define o tamanho da caixa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. CORPO: Centraliza o card na tela inteira */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fundo em degradê moderno */
+}
+
+/* 3. CARD: A caixa principal branca */
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* 4. TÍTULO E LABELS */
+h1 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 5. INPUT: Estilizando o campo de digitação */
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #667eea; /* Muda a cor da borda ao clicar */
+}
+
+/* 6. BOTÃO: Estilo interativo */
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #5a67d8;
+    transform: translateY(-2px); /* Efeito de levante ao passar o mouse */
+}
+
+.button:active {
+    transform: translateY(0); /* Volta ao normal ao clicar */
+}
+
+/* 7. RESULTADO: A div onde a tabuada aparece */
+#exitTabulate {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    text-align: left; /* Alinha a tabuada à esquerda para ficar mais legível */
+}
+
+/* Estilizando cada linha da tabuada (os parágrafos criados pelo JS) */
+#exitTabulate p {
+    font-size: 1.1rem;
+    color: #444;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#exitTabulate p:last-child {
+    border-bottom: none;
+}
+
+/* 8. UTILITÁRIO: Esconder a div antes de clicar */
+.hidden {
+    display: none;
+}
