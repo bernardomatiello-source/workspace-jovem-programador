@@ -20,7 +20,7 @@ function calculate() {
         resultado = valor1 * valor2
     }
 
-    resultadoMatematica.value = resultado.toFixed(4)
+    resultadoMatematica.value = resultado.toFixed(2)
 }
 
 caclulateButton.addEventListener('click', calculate)
