@@ -1,0 +1,94 @@
+/* 1. RESET E CENTRALIZAÇÃO NA TELA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centraliza o card horizontalmente */
+    align-items: center;     /* Centraliza o card verticalmente */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+/* 2. CARD DA CALCULADORA */
+#calculadora {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center; /* Centraliza textos soltos e labels */
+}
+
+/* 3. INPUTS, SELECT E PLACEHOLDERS */
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #124677;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+
+    cursor:  pointer;
+    caret-color: transparent;
+    
+    /* CENTRALIZAÇÃO DOS TEXTOS INTERNOS */
+    text-align: center;         /* Centraliza o texto digitado e o placeholder */
+    text-align-last: center;    /* Centraliza especificamente o texto dentro do <select> no Chrome/Safari */
+}
+
+/* Estilo para os Placeholders (texto que aparece antes de digitar) */
+input::placeholder {
+    text-align: center;
+}
+
+input:focus, select:focus {
+    border-color: #2a5298;
+}
+
+/* 4. RESULTADO (Campo Especial) */
+#mathResult {
+    background-color: #f1f3f5;
+    font-weight: bold;
+    color: #2a5298;
+    border: 2px dashed #708caa;
+    cursor:  default;
+}
+
+/* 5. BOTÃO */
+#btn-calculate {
+    background-color: #2a5298;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+#btn-calculate:hover {
+    background-color: #1e3c72;
+    transform: translateY(-2px);
+}
+
+#btn-calculate:active {
+    transform: scale(0.98);
+}
+
+/* 6. LIMPANDO AS SETINHAS DOS NÚMEROS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
