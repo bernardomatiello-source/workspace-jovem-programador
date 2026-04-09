@@ -5,10 +5,15 @@ const taskList = document.getElementById('taskList')
 const removeTaskButton = document.createElement('button')
 
 function addTask() {
-
+    
+    
     const removeTaskButton = document.createElement('button')
     const addParagrafer = document.createElement('p')
 
+    if(taskText.value == 0){
+        return
+    }
+    
     removeTaskButton.addEventListener('click', function () {
         addParagrafer.remove()
     })
@@ -23,3 +28,8 @@ function addTask() {
 }
 
 addTaskBtn.addEventListener('click', addTask)
+taskText.addEventListener('keydown', function(event){
+    if(event.key === 'Enter') {
+        addTaskBtn.click()
+    }
+})
