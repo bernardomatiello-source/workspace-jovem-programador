@@ -1,0 +1,112 @@
+/* 1. RESET E FUNDO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 2. CONTAINER DO FORMULÁRIO */
+#formValidate {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. ESTILO DO BLOCO DE SENHA (Ajustado para seu ID) */
+#inputPassword {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o label ocupe a linha de cima */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+#inputPassword label {
+    width: 100%; /* Força o label a ficar sozinho no topo */
+    margin-bottom: 6px;
+}
+
+#inputPassword input {
+    flex: 1; /* Faz o input ocupar o espaço da esquerda */
+    margin-bottom: 0; /* Remove a margem extra para não desalinharem */
+}
+
+#togglePassword {
+    background: #e2e8f0;
+    border: 1px solid #cbd5e0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    height: 52px; /* Alinha com a altura do input */
+    transition: 0.2s;
+}
+
+#togglePassword:hover {
+    background: #cbd5e0;
+}
+
+/* 4. ESTILIZAÇÃO GERAL */
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* 5. BOTÕES E RESULTADO */
+#form-button {
+    background-color: #667eea;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#form-result {
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e0;
+    color: #2d3748;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+}
+
+/* Esconde os <br> para não atrapalharem o Flexbox */
+br {
+    display: none;
+}
