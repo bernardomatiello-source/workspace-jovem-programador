@@ -24,3 +24,8 @@ function calculate() {
 }
 
 caclulateButton.addEventListener('click', calculate)
+inputValor2.addEventListener('keydown', function(event) {
+    if(event.key === 'Enter') {
+        caclulateButton.click()
+    }
+})

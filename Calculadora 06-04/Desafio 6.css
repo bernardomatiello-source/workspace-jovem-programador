@@ -38,7 +38,7 @@ input, select {
     transition: border-color 0.3s;
 
     cursor:  pointer;
-    caret-color: transparent;
+   
     
     /* CENTRALIZAÇÃO DOS TEXTOS INTERNOS */
     text-align: center;         /* Centraliza o texto digitado e o placeholder */
