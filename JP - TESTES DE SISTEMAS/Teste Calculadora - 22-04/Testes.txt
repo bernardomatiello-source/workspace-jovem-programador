@@ -1,0 +1,43 @@
+===================================================
+PLANO DE TESTES MANUAIS - CALCULADORA
+===================================================
+
+--- 1. TESTES DE CAMINHO FELIZ (OPERAÇÕES BÁSICAS) ---
+
+Caso de Teste 1: Soma de números inteiros
+- Ação: Digitar "10" no number1, digitar "5" no number2 e clicar em "Sum".
+- Resultado Esperado: O campo result deve exibir "15.00".
+- Motivo do teste: Validar se a operação matemática básica funciona e se o .toFixed(2) está aplicando as duas casas decimais.
+
+Caso de Teste 2: Subtração com resultado negativo
+- Ação: Digitar "5" no number1, digitar "10" no number2 e clicar em "Subtraction".
+- Resultado Esperado: O campo result deve exibir "-5.00".
+- Motivo do teste: Garantir que o sistema lida corretamente com resultados negativos.
+
+Caso de Teste 3: Multiplicação de números decimais
+- Ação: Digitar "2.5" no number1, digitar "2" no number2 e clicar em "Multiply".
+- Resultado Esperado: O campo result deve exibir "5.00".
+- Motivo do teste: Verificar se o input aceita e calcula corretamente valores que já possuem casas decimais.
+
+
+--- 2. TESTES DE CASOS EXTREMOS (EDGE CASES) ---
+
+Caso de Teste 4: Campos em branco (Vazios)
+- Ação: Deixar number1 e number2 vazios e clicar em qualquer operação (ex: "Sum").
+- Resultado Esperado: O campo result deve exibir "0.00".
+- Motivo do teste: O JavaScript converte strings vazias (Number('')) para 0. É importante documentar que o sistema não quebra, mas assume o valor zero.
+
+Caso de Teste 5: Inserção de Texto (Letras) em vez de números
+- Ação: Digitar "abc" no number1, "5" no number2 e clicar em "Sum".
+- Resultado Esperado: O campo result deve exibir "NaN" (Not a Number).
+- Motivo do teste: Validar o comportamento do sistema quando caracteres não-numéricos são forçados no input.
+
+Caso de Teste 6: Divisão por Zero
+- Ação: Digitar "10" no number1, digitar "0" no number2 e clicar em "Division".
+- Resultado Esperado: O campo result deve exibir "Infinity".
+- Motivo do teste: No JavaScript, dividir por zero não trava o sistema, mas retorna o valor infinito. É importante documentar esse comportamento padrão da linguagem.
+
+Caso de Teste 7: Dízimas Periódicas
+- Ação: Digitar "10" no number1, digitar "3" no number2 e clicar em "Division".
+- Resultado Esperado: O campo result deve exibir "3.33".
+- Motivo do teste: Comprovar que o método .toFixed(2) está efetivamente arredondando/cortando as casas decimais extras em dízimas periódicas, em vez de mostrar "3.333333333".
