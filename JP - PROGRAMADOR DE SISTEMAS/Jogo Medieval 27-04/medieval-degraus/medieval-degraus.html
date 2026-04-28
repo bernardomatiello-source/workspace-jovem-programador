@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Degraus</title>
+</head>
+
+<body>
+    <div id="medieval-form"></div>
+        <button id="form-button">Subir Degraus</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formButton = document.getElementById('form-button')
+        const formResult = document.getElementById('medieval-result')
+
+        function verifyForm() {
+
+            let degraus = 1
+
+            while(degraus <= 5) {
+                const paragrafer = document.createElement('p')
+                paragrafer.innerText = `Subindo degrau ${degraus}`
+                degraus++
+                formResult.appendChild(paragrafer)
+            }
+            
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

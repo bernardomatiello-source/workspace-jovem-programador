@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Coin</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <input type="number" id="form-question" placeholder="Digite Suas Moedas">
+        <button id="form-button">Enviar</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formResponse = document.getElementById('form-question')
+        const formButton = document.getElementById('form-button')
+        const formResult = document.getElementById('medieval-result')
+
+        function verifyForm() {
+
+            const paragrafer = document.createElement('p')
+            let response = Number(formResponse.value)
+
+            if(!response) {
+                paragrafer.innerText = `Digite um valor válido!`
+            } else if (response >= 100) {
+                paragrafer.innerText = `${response} moedas. Tem Desconto!`
+            } else {
+                paragrafer.innerText = `${response} moedas. Não tem Desconto!`
+            }
+
+            formResult.appendChild(paragrafer)
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Loja</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <input type="number" id="form-question" placeholder="Digite O Valor das Compras">
+        <button id="form-button">Enviar</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formResponse = document.getElementById('form-question')
+        const formButton = document.getElementById('form-button')
+        const formResult = document.getElementById('medieval-result')
+
+        function verifyForm() {
+
+            const paragrafer = document.createElement('p')
+            let response = Number(formResponse.value)
+
+            let desconto
+            if(!response) {
+                paragrafer.innerText = `Digite um valor válido!`
+            } else if (response > 200) {
+                desconto = response * 0.2
+                paragrafer.innerText = `Valor Original: ${response}, Desconto Aplicado: ${response * 0.2}, Valor Final: ${response - desconto}`
+            } else if (response > 100) {
+                desconto = response * 0.1
+                paragrafer.innerText = ` Valor Original: ${response}, Desconto Aplicado: ${response * 0.1}, Valor Final: ${response - desconto}`
+            } else {
+                paragrafer.innerText = `Sem Desconto`
+            }
+
+            formResult.appendChild(paragrafer)
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

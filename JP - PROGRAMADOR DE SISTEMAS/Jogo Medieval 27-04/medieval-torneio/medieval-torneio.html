@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Torneio</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <input type="string" id="form-question" placeholder="Digite a Idade">
+        <label for="sword">
+            <select id="sword-selection">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </label>
+        <button id="medieval-button">Enviar</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formResponse = document.getElementById('form-question')
+        const formResult = document.getElementById('medieval-result')
+        const formButton = document.getElementById('medieval-button')
+        const formSelection = document.getElementById('sword-selection')
+
+        function verifyForm() {
+
+            const paragrafer = document.createElement('p')
+            let ageResponse = Number(formResponse.value)
+            let swordResponse = formSelection.value
+
+            if(ageResponse >= 18 && swordResponse == 'sim') {
+                paragrafer.innerText = 'Pode Participar do Torneio!'
+            } else {
+                paragrafer.innerText = `Não Pode Participar do Torneio!`
+            }
+
+            formResult.appendChild(paragrafer)
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

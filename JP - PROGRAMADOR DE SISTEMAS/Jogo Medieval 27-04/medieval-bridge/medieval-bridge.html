@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Coin</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <input type="string" id="form-question" placeholder="Digite a palavra secreta">
+        <button id="form-button">Enviar</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formResponse = document.getElementById('form-question')
+        const formButton = document.getElementById('form-button')
+        const formResult = document.getElementById('medieval-result')
+
+        function verifyForm() {
+
+            const paragrafer = document.createElement('p')
+            let response = ((formResponse.value).toString()).toLowerCase()
+
+            if(!response) {
+                paragrafer.innerText = `Digite um valor válido!`
+            } else if (response === "fogo") {
+                paragrafer.innerText = `${response.toUpperCase()}. Pode Passar!`
+            } else {
+                paragrafer.innerText = `${response.toUpperCase()}. Não Pode Passar!`
+            }
+
+            formResult.appendChild(paragrafer)
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

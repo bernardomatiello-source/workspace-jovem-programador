@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Coin</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <button id="form-button">Começar Contagem</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formButton = document.getElementById('form-button')
+        const formResult = document.getElementById('medieval-result')
+
+        function verifyForm() {
+
+            for (let i = 0; i <= 10; i++) {
+                const paragrafer = document.createElement('p')
+
+                paragrafer.innerText = i
+
+                formResult.appendChild(paragrafer)
+            }
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>

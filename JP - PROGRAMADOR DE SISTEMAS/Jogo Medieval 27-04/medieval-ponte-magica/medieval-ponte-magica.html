@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Torneio</title>
+</head>
+
+<body>
+    <div id="medieval-form">
+        <input type="string" id="form-question" placeholder="Digite a Idade">
+        <label for="label-form">
+            <select id="form-acompanhante">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </label>
+        <button id="medieval-button">Enviar</button>
+    </div>
+
+    <div id="medieval-result"></div>
+
+    <script>
+        const formResponse = document.getElementById('form-question')
+        const formResult = document.getElementById('medieval-result')
+        const formButton = document.getElementById('medieval-button')
+        const formSelection = document.getElementById('form-acompanhante')
+
+        function verifyForm() {
+
+            const paragrafer = document.createElement('p')
+            let ageResponse = Number(formResponse.value)
+            let acompResponse = formSelection.value
+
+            if(ageResponse >= 18) {
+                paragrafer.innerText = 'Pode Passar Direto!'
+            } else if (ageResponse >= 16) {
+                if(acompResponse === 'sim') {
+                    paragrafer.innerText = 'Pode Entrar Com Acompanhante!'
+                } else {
+                    paragrafer.innerText = 'Precisa de Acompanhante Para Entrar!'
+                }
+            } else {
+                paragrafer.innerText = 'Entrada Proibida!'
+            }
+
+            formResult.appendChild(paragrafer)
+        }
+
+        formButton.addEventListener('click', verifyForm)
+    </script>
+</body>
+
+</html>
