@@ -18,25 +18,28 @@ function calculator(a, b, operacao) {
     if (operacao === 'multiply') return (num1 * num2).toFixed(2)
 }
 
-subtractionButton.addEventListener('click', function () {
-    operation = 'subtraction'
-    const resultado = calculator(number1.value, number2.value, operation)
-    calcResult.value = resultado
-})
-sumButton.addEventListener('click', function () {
-    operation = 'sum'
-    const resultado = calculator(number1.value, number2.value, operation)
-    calcResult.value = resultado
-})
-divisionButton.addEventListener('click', function () {
-    operation = 'division'
-    const resultado = calculator(number1.value, number2.value, operation)
-    calcResult.value = resultado
-})
-multiplyButton.addEventListener('click', function () {
-    operation = 'multiply'
-    const resultado = calculator(number1.value, number2.value, operation)
-    calcResult.value = resultado
+document.addEventListener('click', function (e) {
+    const el = e.target
+    if (el.id === 'multiply') {
+        operation = 'multiply'
+        const resultado = calculator(number1.value, number2.value, operation)
+        calcResult.value = resultado
+    }
+    if (el.id === 'sum') {
+        operation = 'sum'
+        const resultado = calculator(number1.value, number2.value, operation)
+        calcResult.value = resultado
+    }
+    if (el.id === 'subtraction') {
+        operation = 'subtraction'
+        const resultado = calculator(number1.value, number2.value, operation)
+        calcResult.value = resultado
+    }
+    if (el.id === 'division') {
+        operation = 'division'
+        const resultado = calculator(number1.value, number2.value, operation)
+        calcResult.value = resultado
+    }
 })
 
 if (typeof module !== 'undefined') {
