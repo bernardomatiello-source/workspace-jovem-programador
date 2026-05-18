@@ -41,7 +41,3 @@ document.addEventListener('click', function (e) {
         calcResult.value = resultado
     }
 })
-
-if (typeof module !== 'undefined') {
-    module.exports = calculator;
-}

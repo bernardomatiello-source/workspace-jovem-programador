@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Calculator</title>
+    <link rel="stylesheet" href="calculadora.css">
 </head>
 
 <body>
-    <div id="model-numbers">
-        <input id="number1" type="number" placeholder="Type the first value: ">
-        <input id="number2" type="number" placeholder="Type the second value: ">
-    </div>
+    <div class="calc-wrapper">
+        <div class="calculator">
+            <input type="text" id="result" placeholder="0" readonly>
 
-    <div id="model-calculator">
-        <button id="sum" value="sum"> ➕ </button>
-        <button id="subtraction"> ➖ </button>
-        <button id="division"> ➗ </button>
-        <button id="multiply"> ✖️ </button>
-    </div>
+            <div class="inputs-area">
+                <input type="number" id="number1" placeholder="Primeiro número">
+                <input type="number" id="number2" placeholder="Segundo número">
+            </div>
 
-    <div id="model-result">
-        <input id="result" placeholder="Calc Result">
+            <div class="buttons-row">
+                <button id="sum">+</button>
+                <button id="subtraction">-</button>
+                <button id="multiply">×</button>
+                <button id="division">÷</button>
+            </div>
+        </div>
     </div>
     <script src="calculadora.js"></script>
     <script src="calculadora.test.js"></script>
