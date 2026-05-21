@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/assets/css/calculator.css">
+</head>
+
+<body>
+
+    <div class="calculator-container">
+
+        <div class="calculator-display">
+            <input type="text" id="display" readonly placeholder="0">
+        </div>
+
+        <div class="calculator-buttons">
+
+            <div class="botoes">
+                <button onclick="adicionar('7')">7</button>
+                <button onclick="adicionar('8')">8</button>
+                <button onclick="adicionar('9')">9</button>
+                <button onclick="adicionar('+')">+</button>
+
+                <button onclick="adicionar('4')">4</button>
+                <button onclick="adicionar('5')">5</button>
+                <button onclick="adicionar('6')">6</button>
+                <button onclick="adicionar('-')">-</button>
+
+                <button onclick="adicionar('1')">1</button>
+                <button onclick="adicionar('2')">2</button>
+                <button onclick="adicionar('3')">3</button>
+                <button onclick="adicionar('*')">*</button>
+
+                <button onclick="adicionar('0')">0</button>
+                <button onclick="adicionar('.')">.</button>
+                <button onclick="adicionar('%')">%</button>
+                <button onclick="adicionar('/')">/</button>
+
+                <button class="btn-limpar" onclick="limpar()">C</button>
+                <button class="btn-igual" style="grid-column: span 3;" onclick="calcular()">=</button>
+            </div>
+        </div>
+
+        <script src="/assets/js/calculator.js"></script>
+        <script src="/assets/js/calculator.test.js"></script>
+
+</body>
+
+</html>
